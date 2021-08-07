@@ -37,9 +37,13 @@ def set_wallpaper():
 def main():
     op = "n"
     while op=="n":
-        set_wallpaper()
+        try:
+            set_wallpaper()
+        except :
+            print("No internet connection ..!")
+            return
         op = input("Confirm the current wallpaper ? (y/n)")
-
+    
 
 if __name__ == '__main__':
     main()
