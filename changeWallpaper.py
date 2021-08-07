@@ -8,10 +8,11 @@
 import requests
 import urllib.request
 import ctypes
+import os
 
 def get_wallpaper():
     #print("Hello world")
-    access_key = 'ybDMfAn0RQSfNXPF-PhmX9-Ph17d7kgcwsnGjgXkMAk'
+    access_key = os.environ.get('UNSPLASH_ACCESS_KEY1')
     url = 'https://api.unsplash.com/photos/random?client_id='+access_key
     params = {
         #these are the parameters of random image api
